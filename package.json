@@ -1,0 +1,22 @@
+{
+  "name": "carpe-data",
+  "version": "1.0.0",
+  "description": "Carpe Data Javascript Test",
+  "main": "main.js",
+  "engines": {
+    "npm": ">=6.0.0",
+    "node": ">=12.0.0"
+  },
+  "devDependencies": {
+    "unit.js": "^2.1.1"
+  },
+  "scripts": {
+    "test": "node main.js"
+  },
+  "author": "Jason Young <jason@jasonsyoung.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasonsyoung/carpe-data.git"
+  },
+  "license": "ISC"
+}
