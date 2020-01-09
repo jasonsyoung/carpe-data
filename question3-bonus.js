@@ -5,7 +5,6 @@
  * @author Jason Young <jason@jasonsyoung.com>
  * 
  * 3 (Bonus). Create a class called Maybe
- * Create a class called Maybe. It should have the following properties:
  *
  * Bonus Points Question: Can you implement the Maybe class using const instead of var or let?
  */
