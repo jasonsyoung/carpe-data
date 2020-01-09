@@ -1,4 +1,3 @@
-'use strict';
 /**
  * Carpe Data Javascript Test
  * Question 1
@@ -27,11 +26,12 @@
 /**
  * Checks the divisiblity of a numeric argument by 3 or 5
  * 
- * @param {Number} someNum 
+ * @param {number} someNum 
  * 
- * @returns true if divisible,false if not numerical or not divisible
+ * @return true if divisible,false if not numerical or not divisible
  */
 function checkDivisible(someNum) {
+    'use strict';
     // Sanity check and modulus checks
     return typeof someNum === 'number' && ( someNum % 3 === 0 || someNum % 5 === 0 )
 }

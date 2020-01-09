@@ -1,0 +1,35 @@
+/**
+ * Carpe Data Javascript Test
+ * Question 4
+ * 
+ * @author Jason Young <jason@jasonsyoung.com>
+ * 
+ * 4. Refactoring
+ * Review the check function below. If you had to make this function better, what
+ * would be some of the things you would do to improve it?
+ * 
+ * async function check(req, res) {
+ *   try {
+ *     const a = await sendFirstHttpRequest();
+ *     const b = await sendSecondHttpRequest();
+ *     res.send("requests sent successfully");
+ *   } catch (error) {
+ *     // send back an error
+ *     res.send(error.stack);
+ *   }
+ * }
+ */
+
+Improvements:
+Since this is a "check" function, we would want to do all the checking in the scope of `check`. For 
+instance, since the sending of the two requests are asynchronous, any failures or exceptions that happen
+during their execution will not propagate to the calling scope. It is up to the logic within these two 
+asynchronous functions to handle errors properly, but the `check` function has no knowledge of their 
+execution result, so it always assumes they executed properly. We should add in some checks after each 
+execution to determine their success or failure before sending the success message.
+
+It might also be good to pass the `req` or `res` objects to the two send functions, assuming they don't have
+a way to access them (without seeing the code for these functions it is not possible to determine that).
+
+Also, the catch block performs the `send` method which can also throw exceptions. This is not handled, so
+a `finally` block should be added to catch any errors that occur from it's execution.

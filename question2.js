@@ -1,4 +1,3 @@
-'use strict';
 /**
  * Carpe Data Javascript Test
  * Question 2
@@ -29,12 +28,13 @@
 /**
  * Filters an array by testing each argument against a predicate function
  * 
- * @param {Array} array - The array to filter
- * @param {Function} predicate - Function that returns true or false 
+ * @param {array} array - The array to filter
+ * @param {function} predicate - Function that returns true or false 
  * 
- * @returns filtered array, otherwise an empty array 
+ * @return filtered array, otherwise an empty array 
  */
 function filter(array, predicate) {
+    'use strict';
     let result = []
     if (Array.isArray(array) && typeof predicate === 'function') {
         array.forEach(element => {
