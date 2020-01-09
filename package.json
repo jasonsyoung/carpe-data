@@ -9,12 +9,10 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "hcat": "^2.1.1",
     "mocha": "^7.0.0",
     "unit.js": "^2.1.1"
   },
   "scripts": {
-    "start": "./index.sh",
     "test": "mocha ./test"
   },
   "author": "Jason Young <jason@jasonsyoung.com>",
@@ -24,7 +22,7 @@
   },
   "license": "ISC",
   "mocha": {
-    "reporter": "nyan",
+    "reporter": "spec",
     "recursive": true,
     "growl": true,
     "colors": true,

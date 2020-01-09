@@ -10,6 +10,8 @@
  * Bonus Points Question: Can you implement the Maybe class using const instead of var or let?
  */
 
+// I believe this is what is being asked in this bonus question
+
 // Things I Googled:
 // - None for this question
 
