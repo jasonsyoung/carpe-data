@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <title>SuperAgent — elegant API for AJAX in Node and browsers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/3.0.0/tocbot.css">
+    <link rel="stylesheet" href="docs/style.css">
+  </head>
+  <body>
+    <ul id="menu"></ul>
+    <div id="content">    <section class="suite">
+      <h1>Test filter method</h1>
+      <dl>
+        <dt>test numeric array 0-19 with predicate elements &#x3C; 10</dt>
+        <dd><pre><code>const arr = Array.from(Array(20).keys())
+        const predicate = function(e) { return e &#x3C; 10; }
+        const filtered = filter(arr, predicate)
+        const nativeFiltered = arr.filter(predicate)
+        test
+            .case(&#x27;Checking array lengths match&#x27;)
+                .array(filtered)
+                    .value(filtered.length)
+                        .is(arr.length / 2)
+        test
+            .case(&#x27;Checking equality to the native array&#x27;)
+                .array(nativeFiltered)
+                    .is(filtered)</code></pre></dd>
+      </dl>
+    </section>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  $('code').each(function () {
+    $(this).html(highlight($(this).text()));
+  });
+
+  function highlight(js) {
+    return js
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/('.*?')/gm, '<span class="string">$1</span>')
+      .replace(/(\d+\.\d+)/gm, '<span class="number">$1</span>')
+      .replace(/(\d+)/gm, '<span class="number">$1</span>')
+      .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
+      .replace(/\b(function|new|throw|return|var|if|else)\b/gm, '<span class="keyword">$1</span>')
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/3.0.0/tocbot.js"></script>
+<script>
+  // Only use tocbot for main docs, not test docs
+  if (document.querySelector('#superagent')) {
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '#menu',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: '#content',
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: 'h2',
+      smoothScroll: false
+    });
+  }
+</script>
+</body>
+
+</html>

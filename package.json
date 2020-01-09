@@ -7,16 +7,27 @@
     "npm": ">=6.0.0",
     "node": ">=12.0.0"
   },
+  "dependencies": {},
   "devDependencies": {
+    "hcat": "^2.1.1",
+    "mocha": "^7.0.0",
     "unit.js": "^2.1.1"
   },
   "scripts": {
-    "test": "node main.js"
+    "start": "./index.sh",
+    "test": "mocha ./test"
   },
   "author": "Jason Young <jason@jasonsyoung.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/jasonsyoung/carpe-data.git"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "mocha": {
+    "reporter": "nyan",
+    "recursive": true,
+    "growl": true,
+    "colors": true,
+    "ui": "bdd"
+  }
 }
