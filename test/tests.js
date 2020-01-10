@@ -8,7 +8,7 @@
 // - https://gist.github.com/6174/6062387 for generating random strings
 
 const test = require('unit.js')
-const filter = require('../question2')
+const filter = require('../src/question2')
 
 describe('Test filter method', function() {
     it('test numeric array 0-19 with predicate where elements < 10', function() {
