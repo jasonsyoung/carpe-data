@@ -9,7 +9,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "mocha": "^7.0.0",
+    "mocha": "^10.2.0",
     "unit.js": "^2.1.1"
   },
   "scripts": {
